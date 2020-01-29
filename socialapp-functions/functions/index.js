@@ -1,6 +1,10 @@
 const functions = require('firebase-functions');
 var admin = require("firebase-admin");
 var serviceAccount = require("../key/admin.json");
+const express = require('express');
+
+
+const app = express();
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://socialapp-6b1c8.firebaseio.com"
